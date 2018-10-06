@@ -1,0 +1,39 @@
+{
+  "name": "carby",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukaskurz/carby.git"
+  },
+  "keywords": [
+    "slack",
+    "chatbot",
+    "mqtt"
+  ],
+  "author": "Lukas Kurz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukaskurz/carby/issues"
+  },
+  "homepage": "https://github.com/lukaskurz/carby#readme",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/config": "0.0.34",
+    "@types/mqtt": "^2.5.0",
+    "typescript": "^3.1.1"
+  },
+  "dependencies": {
+    "@slack/client": "^4.8.0",
+    "axios": "^0.18.0",
+    "config": "^2.0.1",
+    "mqtt": "^2.18.8"
+  }
+}

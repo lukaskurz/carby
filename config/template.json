@@ -1,0 +1,37 @@
+{
+    "app": {
+        "name": ""
+    },
+    "api": {
+        "port": -1,
+        "endpoints": {
+            "general": {
+                "interval": -1,
+                "url": ""
+            },
+            "carbyStatus": {
+                "interval": -1,
+                "url": ""
+            }
+        }
+    },
+    "caldav": {
+        "url": "",
+        "username": "",
+        "password": "",
+        "timeFormat": ""
+    },
+    "slack": {
+        "username": "",
+        "emoji": "",
+        "channel": "",
+        "webhook_url": "",
+        "eventColor": ""
+    },
+    "mqtt": {
+        "url":"",
+        "topics": [
+            ""
+        ]
+    }
+}
