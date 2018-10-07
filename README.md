@@ -42,7 +42,5 @@ The `-p` flag tells docker with ports to expose, so if you any other ports (for 
 
 ```docker run -p 1883:1883 -p 8080:8080```
 
-
-
 Ideally, you should be ready to go after that. If there are some problems with this process, please look for help in the issues or create an issue for the problem.
 And if you're eager to do some open source work, you can go ahead, fix the bug yourself and create a pull request :)
