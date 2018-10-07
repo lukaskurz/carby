@@ -15,19 +15,6 @@
             }
         }
     },
-    "caldav": {
-        "url": "",
-        "username": "",
-        "password": "",
-        "timeFormat": ""
-    },
-    "slack": {
-        "username": "",
-        "emoji": "",
-        "channel": "",
-        "webhook_url": "",
-        "eventColor": ""
-    },
     "mqtt": {
         "url":"",
         "topics": [
