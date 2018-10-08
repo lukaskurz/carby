@@ -19,7 +19,7 @@
     "mqtt"
   ],
   "author": "Lukas Kurz",
-  "license": "ISC",
+  "license": "GNU GPL-3.0",
   "bugs": {
     "url": "https://github.com/lukaskurz/carby/issues"
   },
