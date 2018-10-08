@@ -10,7 +10,7 @@ let lastStatus = new Date(2000, 1, 1).getTime();
 mqttClient.on('connect', function () {
     console.log("connecting to mqtt");
 
-    for (let topic in Config.get("mqtt.topics") as Array<string>) {
+    for (let topic of Config.get("mqtt.topics") as Array<string>) {
         mqttClient.subscribe(topic, (err) => {
             console.log("subscribing to mqtt");
             if (!err) {
