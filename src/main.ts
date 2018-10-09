@@ -15,7 +15,7 @@ mqtt.connect()
     .then(() => {
         messages = mqtt.listen();
         messages.subscribe((message) => {
-            messageHandler.handle(message);
+            messageManager.handle(message);
         }, (error) => {
             console.log(error);
         });
