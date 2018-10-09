@@ -1,24 +1,28 @@
 {
     "app": {
-        "name": ""
+        "name": "Carby"
     },
     "api": {
-        "port": -1,
+        "port": 80,
         "endpoints": {
             "general": {
-                "interval": -1,
-                "url": ""
+                "type": "alarm",
+                "lowerlimit": 600,
+                "upperlimit": 1000,
+                "interval": 300000,
+                "url": "https://somelink.com/"
             },
             "carbyStatus": {
-                "interval": -1,
-                "url": ""
+                "type": "status",
+                "interval": 60000,
+                "url": "https://somelink.com/"
             }
         }
     },
     "mqtt": {
-        "url":"",
+        "url": "mqtt://some.link:1883",
         "topics": [
-            ""
+            "topics/this/that/+/foobar"
         ]
     }
 }
