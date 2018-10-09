@@ -1,22 +1,24 @@
 import MqttManager, { Measurement } from './mqtt-client';
 import Config from "config"
 import Axios from 'axios';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 const mqtt = new MqttManager(Config);
-let messages: Observable<Measurement>;
+let messages: Subject<Measurement>;
 
 mqtt.connect()
     .then(() => {
-        return mqtt.subscribe()
+        return mqtt.subscribe();
     })
     .then(() => {
-        messages = mqtt.listen()
+        messages = mqtt.listen();
         messages.subscribe((measurement) => {
             console.log(JSON.stringify(measurement));
-        })
+        }, (error) => {
+            console.log(error);
+        });
     })
-    .catch(()=>{
+    .catch(() => {
         console.log("Error in MQTT process");
     });
 
