@@ -5,7 +5,7 @@ import { Observable, Subject, Observer, observable } from 'rxjs';
 
 export default class MqttManager {
     client: MqttClient;
-    messages: Subject<Measurement>;
+    messages: Subject<MqttMessage>;
 
     constructor(public config: IConfig) {
         this.client = Mqtt.connect(this.config.get("mqtt.url"));
@@ -62,7 +62,7 @@ export default class MqttManager {
         }
     }
 
-    listen(): Subject<Measurement> {
+    listen(): Subject<MqttMessage> {
         this.messages = new Subject();
 
         this.client.on("message", (topic, message) => {
@@ -73,7 +73,7 @@ export default class MqttManager {
                 console.log("MQTT: Message: Not a measurement");
                 this.messages.error("Message: Not a measurement");
             } else {
-                this.messages.next(data as Measurement);
+                this.messages.next({ topic: topic, data: data as Measurement });
             }
         });
 
@@ -88,4 +88,9 @@ export default class MqttManager {
 export interface Measurement {
     timestamp: number;
     value: number;
+}
+
+export interface MqttMessage {
+    topic: string;
+    data: Measurement;
 }
