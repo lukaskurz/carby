@@ -13,7 +13,12 @@ Clone the repo and then install the npm dependecies.
 
 ```npm install```
 
-To start the project you first have to build it using
+You will have to do some configuration before starting, by creating a `default.json` in the `config` folder using the `template.json`.
+After having done that, you can start the project by typing the following command.
+
+```npm start```
+
+To build the project use this command.
 
 ```npm run build```
 
@@ -21,17 +26,16 @@ or if you want to code and develop on it, you can keep it running, watching file
 
 ```npm run build:watch```
 
-After having built the project, you need to do some configuration, by creating a `default.json` in the `config` folder using the `template.json`.
-After having done that, you can finally start the project by typing the following command.
+If you want to start the project without having to rebuild everything type this.
 
-```npm start```
+```npm run serve```
 
 ## With docker
 
 Clone the repo and configure the application by creating a `default.json` in the `config` folder using the `template.json`.
 After that, build a new image using this.
 
-```docker build carby:latest .```
+```docker build -t carby:latest .```
 
 Having built the image you can start a new container with the application running by typing this.
 
