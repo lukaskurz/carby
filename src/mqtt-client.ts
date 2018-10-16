@@ -8,7 +8,7 @@ export default class MqttManager {
     messages: Subject<MqttMessage>;
 
     constructor(public config: IConfig) {
-        this.client = Mqtt.connect(this.config.get("mqtt.url"));
+        this.client = Mqtt.connect(this.config.get("mqtt.url"),{username: this.config.get("mqtt.username"), password: this.config.get("mqtt.password")});
         this.messages = new Subject();
     }
 

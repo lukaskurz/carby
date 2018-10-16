@@ -21,6 +21,8 @@
     },
     "mqtt": {
         "url": "mqtt://some.link:1883",
+        "username":"",
+        "password":"",
         "topics": [
             "topics/this/that/+/foobar"
         ]
